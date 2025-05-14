@@ -1,8 +1,8 @@
 from django.contrib import admin
 from django.urls import path, include
-
+from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('calc.urls')),  # ✅ Correct usage with string
-    path('',include('data.urls'))
+    path('home',views.home,name='home'),
+    path('about',views.about,name='about')
 ]
